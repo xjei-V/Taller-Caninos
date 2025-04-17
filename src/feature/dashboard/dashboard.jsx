@@ -15,11 +15,12 @@ export const Dashboard = () => {
                 <h2 className='fw-bold text-center mt-3'>Dashboard</h2>
                 <ul className='navbar-nav d-flex flex-column gap-3 text-white py-3 p-4'>
                     <li className='nav-item'><Link className='nav-link' to='/admin-dashboard'>Inicio 🏠</Link></li>
-                    <li className='nav-item'><Link className='nav-link' to='/'>Usuarios</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to='/'>Productos 🛒</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to='/'>compañias 💼</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to='/'>Roles 📂</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to='/'>Categorías 📂</Link></li>
+                    <li className='nav-item'><Link className='nav-link' to='/admin/usuarios'>Usuarios</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to='/admin/products_dash'>Productos 🛒</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to='/admin/companies'>compañias 💼</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to='/admin/roles'>Roles 📂</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to='/admin/categories_dash'>Categorías 📂</Link></li>
+        
                 </ul>
 
             </div>

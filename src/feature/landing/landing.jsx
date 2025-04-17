@@ -2,12 +2,18 @@ import React, { useState } from 'react'
 import { Footer } from './components/footer'
 import { Nav } from './components/nav'
 import { FaAngleRight, FaAngleDown, FaAngleLeft } from 'react-icons/fa'; // íconos flecha
+import { FaPaw, FaDog, FaTruck } from 'react-icons/fa'
+
 
 
 export const Landing = () => {
 
+  const [mostrarNosotros, setMostrarNosotros] = useState(true)
   const [mostrarTexto, setMostrarTexto] = useState(false);
 
+  const handleToggleNosotros = () => {
+    setMostrarNosotros(!mostrarNosotros)
+  }
   const handleToggle = () => {
     setMostrarTexto(!mostrarTexto);
   }
@@ -29,7 +35,7 @@ export const Landing = () => {
         </div>
         <div className='col-md-6 text-center'>
       <img
-        src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+        src="/imagenes/banner.png"
         alt="Perro feliz"
         className="img-fluid rounded shadow"
         style={{ maxHeight: '350px' }}
@@ -52,7 +58,7 @@ export const Landing = () => {
             </div>
           ) : (
             <img
-              src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+              src="/imagenes/quienes.png"
               alt="Perro Caninos"
               className="img-fluid fade-in"
               style={{ maxHeight: '250px' }}
@@ -65,7 +71,7 @@ export const Landing = () => {
             className="btn btn-warning btn-sm rounded-circle"
             onClick={handleToggle}
           >
-            {mostrarTexto ? <FaAngleDown /> : <FaAngleLeft />}
+            {mostrarTexto ?  <FaAngleLeft /> : <FaAngleDown />}
           </button>
           <h3 className="mb-0">¿Quiénes somos?</h3>
         </div>
@@ -73,215 +79,54 @@ export const Landing = () => {
     </div>
 
 
-    
-    
-    {/* Servicios */}
+      
+    <div className="container my-5">
+  <div className="row align-items-center">
+    <div className="col-md-6 d-flex justify-content-center gap-2">
+      <h3 className="mb-0">Nosotros</h3>
+      <button
+        className="btn btn-warning btn-sm rounded-circle"
+        onClick={handleToggleNosotros}
+      >
+        {mostrarNosotros ? <FaAngleDown /> : <FaAngleRight />}
+      </button>
+    </div>
 
-    <section>
-      <div className='container-fluid mt-5'>
-        <h3 className="text-dark text-center mb-4">Servicios</h3>
-        <div className="row">
-              <div className="col-md-4 mb-4" >
-                <div className="card h-100">
-                  <img src='' className="card-img-top" />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div> 
-              <div className="col-md-4 mb-4" >
-                <div className="card h-100">
-                  <img src='' className="card-img-top" />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div> 
-              <div className="col-md-4 mb-4" >
-                <div className="card h-100">
-                  <img src='' className="card-img-top" />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div> 
-              <div className="col-md-4 mb-4" >
-                <div className="card h-100">
-                  <img src='' className="card-img-top" />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div> 
-              <div className="col-md-4 mb-4" >
-                <div className="card h-100">
-                  <img src='' className="card-img-top" />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div> 
-              <div className="col-md-4 mb-4" >
-                <div className="card h-100">
-                  <img src='' className="card-img-top" />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>           
+    <div className="col-md-6 mt-4 mt-md-0 text-center">
+      {mostrarNosotros ? (
+        <div className="text-start bg-light p-4 rounded border shadow fade-in">
+          <h5 className="text-warning">¿Por qué elegir Caninos SABS?</h5>
+          <ul className="list-unstyled text-dark">
+            <li className="mb-2">
+              <FaDog className="me-2 text-warning" />
+              Amor y cuidado por cada peludo cliente.
+            </li>
+            <li className="mb-2">
+              <FaTruck className="me-2 text-warning" />
+              Transporte seguro y confiable para tus mascotas.
+            </li>
+            <li className="mb-2">
+              <FaPaw className="me-2 text-warning" />
+              Productos y servicios de alta calidad.
+            </li>
+          </ul>
+          <p className="mt-3">
+            En <strong>Caninos SABS</strong>, tratamos a tus mascotas como parte de nuestra familia. Nos apasiona brindar soluciones que mejoren su bienestar y tu tranquilidad.
+          </p>
         </div>
-        </div>
-      </section>
+      ) : (
+        <img
+          src="https://tse1.mm.bing.net/th?id=OIP.dPXNY8HjuR-xD3aOyEweKQAAAA&pid=Api&P=0&h=180"
+          alt="Canino feliz"
+          className="img-fluid fade-in rounded"
+          style={{ maxHeight: '250px' }}
+        />
+      )}
+    </div>
+  </div>
+</div>
 
-      {/* Productos */}
-      <section>
-        <div className='container-fluid mt-5'>
-        <h3 className="text-dark text-center mb-4">Productos</h3>
-        <div className="row">
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-         
-        
-            <p className="text-muted">Próximamente nuestros productos estarán aquí.</p>
-         
-        </div>
-        </div>
-      </section>
-
-      {/* Categorías */}
-      <section>
-        <div className='container-fluid mt-5'>
-        <h3 className="text-dark text-center mb-4">Categorías</h3>
-        <div className="row">
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                  <img src='' className="card-img-top" alt='' />
-                  <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                  </div>
-                </div>
-              </div>
-            
-            </div>
-        </div>
-      </section>
+      
 
 
       <Footer></Footer>

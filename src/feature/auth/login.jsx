@@ -25,7 +25,7 @@ export const Login = () => {
       const token = response.data.token
       login(token) // Usamos la función del contexto para guardar el token
       alert("Login exitoso")
-      navigate('/admin-dashboard')
+      navigate('/admin')
     } catch (error) {
       console.error("Error al iniciar sesión:", error)
       alert("Error en el login. Verifica tus datos.")
