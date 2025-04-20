@@ -11,10 +11,7 @@ import { ProductsDash } from '../dashboard/products/products'
 import { Companies } from '../dashboard/companies/companies'
 import { CategoriesDash } from '../dashboard/categories/categories_dash'
 import { Roles } from '../dashboard/roles/roles'
-import { Alimentos } from '../landing/categories-landing/alimentos/Alimentos'
-import { Higiene } from '../landing/categories-landing/higienes/higiene'
-import { Jugetes } from '../landing/categories-landing/juguetes/jugetes'
-import { Accesorios } from '../landing/categories-landing/accesorios/accesorios'
+
 
 export const Rutas = () => {
   return (
@@ -24,11 +21,8 @@ export const Rutas = () => {
       <Route path='/login' element={<Login></Login>}/>
       <Route path='/products' element={<Products></Products>}/>
       <Route path='/categorias' element={<Categorie></Categorie>}/>
-      <Route path='/alimentos' element={<Alimentos></Alimentos>}></Route>
-      <Route path='/higiene' element={<Higiene></Higiene>}/>
-      <Route path='/Accesorios' element={<Accesorios></Accesorios>}/>
-      <Route path='/juguetes' element={<Jugetes></Jugetes>}/>
-
+     
+     
       <Route path='/admin' element={<ProtectedRoute> <Dashboard /></ProtectedRoute>}>
       
       <Route path='usuarios' element={<Users></Users>}/>
