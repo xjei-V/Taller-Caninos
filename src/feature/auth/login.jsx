@@ -3,11 +3,11 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Nav } from '../landing/components/nav'
 import { Footer } from '../landing/components/footer'
 import axios from 'axios'
-import  { AuthContext } from './authContext'
+import  { AuthContext } from './authContext' // llamamos al contexto de auth para asi poder usuar los datos anteriores
 
 export const Login = () => {
   const navigate = useNavigate()
-  const { login } = useContext(AuthContext)
+  const { login } = useContext(AuthContext) // usamos el dato login es decir la funcion con llaves para asi destructurar datos
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -15,14 +15,14 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/login', {
+      const response = await axios.post('http://localhost:3000/login', {  // la constante response me ava almacenar la peticion de mi api 
         
         email,
-        password
+        password   //le va a mandar el correo y la contraseña a la api 
       })
       console.log(response)
 
-      const token = response.data.token
+      const token = response.data.token // la constante token me va almcenar el token que me dio en el backend con el response.data.token
       login(token) // Usamos la función del contexto para guardar el token
       alert("Login exitoso")
       navigate('/admin')
@@ -44,6 +44,7 @@ export const Login = () => {
             <label className='form-label' htmlFor='email'>Correo electrónico</label>
             <input
               type='email'
+              required
               className='form-control'
               id='email'
               placeholder='Correo electrónico'
@@ -56,6 +57,7 @@ export const Login = () => {
             <label className='form-label' htmlFor='password'>Contraseña</label>
             <input
               type='password'
+              required
               className='form-control'
               id='password'
               placeholder='Contraseña'

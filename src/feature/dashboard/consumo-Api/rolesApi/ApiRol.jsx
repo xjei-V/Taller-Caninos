@@ -1,17 +1,19 @@
+//listar
+
 import axios from "axios"
 
-// ver el listado
+export const GetRoles = async () =>{
 
-export const GetProducts = async () =>{
+    const url = "http://localhost:3000/roles"
 
-    const url = 'http://localhost:3000/products'
     try {
         const response = await axios.get(url)
-        return response.data.products
+        return response.data
         
     } catch (error) {
         return {status: false, message : "No tienes las api negrito ", error}
         
     }
+
 }
 

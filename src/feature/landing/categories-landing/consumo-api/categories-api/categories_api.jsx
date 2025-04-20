@@ -7,18 +7,17 @@ export const GetCategorie = async ()=>{
   try {
     const response = await axios.get(url)
     return response.data.categories
-    
+
   } catch (error) {
     return {status: false, message : "No tienes las api negrito ", error}
-    
+
   }
 
 
-  
+
 
 }
 export const GetProductsByCategory = async (categoryId) => {
-  
   const url = `http://localhost:3000/products/category/${categoryId}`;
 
   try {
@@ -29,4 +28,3 @@ export const GetProductsByCategory = async (categoryId) => {
     return [];
   }
 };
-

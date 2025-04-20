@@ -116,12 +116,49 @@ export const Landing = () => {
         </div>
       ) : (
         <img
-          src="https://tse1.mm.bing.net/th?id=OIP.dPXNY8HjuR-xD3aOyEweKQAAAA&pid=Api&P=0&h=180"
+          src="https://media.istockphoto.com/id/1389844406/es/vector/ilustraci%C3%B3n-de-un-concepto-hospitalario-que-examina-y-trata-a-gatos-y-perros.jpg?s=612x612&w=0&k=20&c=bm0Hmk5PYlHJXjciJ_7PdHvfou6ck9OWU_DQkkpDv_U="
           alt="Canino feliz"
           className="img-fluid fade-in rounded"
           style={{ maxHeight: '250px' }}
         />
       )}
+    </div>
+  </div>
+  <div className='row container-fluid mt-5'>
+    <div className='col-md-4'>
+      <div className='card'>
+        <div  className='card-title text-center'>
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSLquWzzUomaNEOn1ifTFizEHgr0Z7ODi2RzFd0FmqprNGCCvLv" className='card-img-top ' style={{maxWidth:"270px"}} alt="" />
+        </div>
+        <div className='card-body'>
+          <h2 className='text-center'>Vision</h2>
+          <p>Ser reconocidos como líderes en el bienestar y cuidado integral de los perros, promoviendo una vida saludable y feliz para cada mascota.</p>
+        </div>
+      </div>
+    </div>
+    <div className='col-md-4'>
+      <div className='card'>
+        <div className='card-title text-center'>
+        <img src="https://www.integralshipping.com/wp-content/uploads/2017/11/Mision-Integral-Shipping-company-02.jpg" className='card-img-top ' style={{maxWidth:"205px"}} alt="" />
+        </div>
+        <div className='card-body' >
+          <h2 className='text-center'>Mision</h2>
+          <p>Nuestra misión es proporcionar productos y servicios de alta calidad que mejoren la vida de los perros y fortalezcan el vínculo entre las mascotas y sus dueños.</p>
+        </div>
+
+      </div>
+    </div>
+    <div className='col-md-4'>
+      <div className='card'>
+        <div className='card-title text-center'>
+        <img src="https://static.vecteezy.com/system/resources/previews/009/966/307/non_2x/company-values-icon-style-vector.jpg" className='card-img-top ' style={{maxWidth:"200px"}} alt="" />
+        </div>
+        <div className='card-body' >
+          <h2 className='text-center'>Valores</h2>
+          <p>Amor por los perros, compromiso con la calidad, innovación constante, responsabilidad ética, transparencia en nuestras acciones y apoyo a la comunidad canina.</p>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
